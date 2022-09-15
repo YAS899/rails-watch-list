@@ -1,0 +1,17 @@
+<%= render @list %>
+
+<p><strong>Movies</strong></p>
+<ul class="list-group">
+  <% @list.movies.each do |t| %>
+    <li class="list-group-item">
+      <%= t.title %>
+      <%= t.overview %>
+      <%= t.poster_url %>
+      <%= t.rating %>
+    </li>
+  <% end %>
+</ul>
+<br>
+
+<div>
+  <%= link_to "Back to lists", lists_path %>
